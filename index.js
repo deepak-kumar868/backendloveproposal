@@ -33,6 +33,9 @@ app.post('/api/response', async (req, res) => {
         res.status(500).json({ error: 'Error saving response' });
     }
 });
+app.get('/', (req, res) => {
+    res.send('Hello, this is your API root.');
+});
 
 app.listen(port, () => console.log(`Server running on port ${port}`));
 module.exports = app
