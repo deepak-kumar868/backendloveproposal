@@ -28,9 +28,9 @@ app.post('/api/response', async (req, res) => {
     try {
         const response = new Response({ choice });
         await response.save();
-        res.status(201).json({ message: 'Response saved successfully' });
+        // res.status(201).json({ message: 'Response saved successfully' });
     } catch (err) {
-        res.status(500).json({ error: 'Error saving response' });
+        res.status(500);
     }
 });
 app.get('/', (req, res) => {
