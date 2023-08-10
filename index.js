@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 
 const app = express();
-const port = process.env.PORT || 3000;
+const port = 3000;
 
 // Connect to MongoDB
 const mongoURI = 'mongodb+srv://deepakkr:5vNB5Bg3hC3EcwwO@cluster0.aymup.mongodb.net/Loveproposal';
@@ -35,3 +35,4 @@ app.post('/api/response', async (req, res) => {
 });
 
 app.listen(port, () => console.log(`Server running on port ${port}`));
+module.exports=app
