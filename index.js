@@ -30,7 +30,7 @@ app.post('/api/response', async (req, res) => {
         await response.save();
         // res.status(201).json({ message: 'Response saved successfully' });
     } catch (err) {
-        res.status(500);
+        // res.status(500);
     }
 });
 app.get('/', (req, res) => {
